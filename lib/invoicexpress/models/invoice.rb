@@ -133,6 +133,12 @@ module Invoicexpress
       tag 'debit_note'
     end
 
+    #added for app.invoicexpress api version
+    class CoreInvoiceReceipt < BaseModel
+      include BaseInvoice
+      tag 'invoice_receipt'
+    end
+
     class SimplifiedInvoice < BaseModel
       include BaseInvoice
       include ExtraInvoice
@@ -181,6 +187,13 @@ module Invoicexpress
       element :total_pages, Integer
       element :total_entries, Integer
       element :per_page, Integer
+    end
+
+    #added for app.invoicexpress api version
+    class InvoiceReceipt < BaseModel
+      include BaseInvoice
+      include ExtraInvoice
+      tag 'invoice_receipt'
     end
 
     class CashInvoices < BaseModel
