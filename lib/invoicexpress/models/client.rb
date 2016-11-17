@@ -6,7 +6,7 @@ module Invoicexpress
 
       element :id, Integer
       element :name, String
-      element :code, String
+      element :code, Integer
       element :email, String
       element :address, String
       element :postal_code, String
